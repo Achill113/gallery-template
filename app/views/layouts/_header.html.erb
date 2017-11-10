@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>promisesoftheheart</title>
+    <%= javascript_include_tag "jquery" %>
+    <%= stylesheet_link_tag "app\\assets\\stylesheets\\template.scss" %>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <h1>LOGO HERE</h1>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><%= link_to "HOME", :controller => 'home', :action => 'index'%></li>
+          <li><%= link_to "GALLERY", :controller => 'home', :action => 'index'%></li>
+          <li><%= link_to "CONTACT ME", :controller => 'home', :action => 'index'%></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</htlm>
