@@ -1,0 +1,54 @@
+<%= render "layouts/header" %>
+<div class="container gallery-container">
+
+    <h1>GALLERY</h1>
+
+    <p class="page-description text-center">I Don't Know What To Put Here</p>
+
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
+                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
+                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
+                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
+                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
+                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
+                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+</body>
+</html>
