@@ -3,6 +3,8 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( jquery.js )
+Rails.application.config.assets.precompile += %w( home.js )
+Rails.application.config.assets.precompile += %w( home.css )
 Rails.application.config.assets.precompile += %w( template.css )
 
 # Add additional assets to the asset load path

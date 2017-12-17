@@ -4,51 +4,52 @@
 @import 'https://fonts.googleapis.com/css?family=Allerta+Stencil|Roboto+Mono';
 
 html, body {
+
+}
+
+.wrapper {
+  margin-top: 100px;
+	min-height: 600px;
   background: #333;
   margin: 0;
 	text-align: center;
 	text-transform: uppercase;
 	background-position: center;
   font-family: 'Allerta Stencil', sans-serif;
+
+  h1 {
+  	color: #fff;
+  	font-size: 68px;
+  	font-size: 5.5vw;
+  	width: 100%;
+  	display: inline-flex;
+    justify-content: center;
+    letter-spacing: 8px;
+  }
+  h1 span:nth-child(6) {
+    margin-right: 30px;
+  }
+  h2 {
+  	font-weight: 500;
+  	font-size: 27px;
+  	font-size: 2vw;
+  	margin: 0 auto;
+  	color: #fff;
+  	width: 100%;
+  	text-align: center;
+  }
+
+  ul {
+  	list-style: none;
+  	display: block;
+  }
+
+  a {
+  	color: #fd3267;
+  }
 }
 
-h1 {
-	color: #fff;
-	font-size: 68px;
-	font-size: 5.5vw;
-	width: 100%;
-	display: inline-flex;
-  justify-content: center;
-  letter-spacing: 8px;
-}
-h1 span:nth-child(6) {
-  margin-right: 30px;
-}
-h2 {
-	font-weight: 500;
-	font-size: 27px;
-	font-size: 2vw;
-	margin: 0 auto;
-	color: #fff;
-	width: 100%;
-	text-align: center;
-}
-
-ul {
-	list-style: none;
-	display: block;
-}
-
-a {
-	color: #fd3267;
-}
-
-.wrapper {
-  margin-top: 100px;
-	min-height: 500px;
-}
-
-.logo {
+.countdown_logo {
 	text-align: center;
 	width: 100%;
 }
