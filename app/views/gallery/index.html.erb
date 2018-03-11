@@ -1,47 +1,52 @@
 <%= render "layouts/header" %>
+<script>
+  Galleria.loadAssetTheme('classic');
+  Galleria.configure({
+    imageCrop: true,
+    transition: 'fade',
+    log: true,
+    // better handle image paths in assets folder!
+    assets: false,
+    // if pic can't be loaded use this one as fallback
+    dummy: '/assets/images/dummy.png'
+  });
+  Galleria.run('#galleria');
+</script>
 <div class="container gallery-container">
 
     <h1>GALLERY</h1>
 
     <p class="page-description text-center">I Don't Know What To Put Here</p>
+    <div class="gallery">
+      <div id="galleria">
+      </div>
+      <div class="tz-gallery">
 
-    <div class="tz-gallery">
+          <div class="row">
 
-        <div class="row">
+              <% @images.each do |image| %>
+                <div class="col-sm-12 col-md-4">
+                  <a class="lightbox" href="<%= image_path(image.presigned_url("get", expires_in: 10)) %>">
+                    <center>
+                      <%= link_to image_tag(image.presigned_url("get", expires_in: 10), height: "200") %>
+                    </center>
+                  </a>
+                </div>
+              <% end %>
+              <% @local_images.each do |image| %>
+                <div class="col-sm-12 col-md-4">
+                  <a class="lightbox" href="<%= path_to_image(Rails.root.join("private", "uploads", "test_image.jpg")) %>">
+                    <center>
+                      <%= image_tag("/gallery/#{image.id}/display", height: "200") %>
+                    </center>
+                  </a>
+                </div>
+              <% end %>
 
-            <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
-                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
-                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
-                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-8">
-                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
-                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
-                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="<%= image_path("bridge.jpg") %>">
-                    <%= image_tag("bridge.jpg", :alt => "Bridge") %>
-                </a>
-            </div>
+          </div>
 
-        </div>
-
+      </div>
+      <!-- TODO: Add next and previous buttons and page numbering -->
     </div>
 
 </div>
@@ -50,5 +55,11 @@
 <script>
     baguetteBox.run('.tz-gallery');
 </script>
+<div class="upload-form">
+  <%= form_tag({action: :upload}, multipart: true) do %>
+    <%= file_field_tag 'img' %>
+    <%= submit_tag 'Upload' %>
+  <% end %>
+</div>
 </body>
 </html>

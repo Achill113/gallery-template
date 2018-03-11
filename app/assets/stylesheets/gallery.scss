@@ -8,6 +8,12 @@
 //     padding: 40px 0;
 // }
 
+#galleria {
+  width: 700px;
+  height: 400px;
+  background: white
+}
+
 .container.gallery-container {
     background-color: #fff;
     color: #35373a;
@@ -39,7 +45,6 @@
 }
 
 .tz-gallery .lightbox img {
-    width: 100%;
     border-radius: 0;
     position: relative;
 }
@@ -86,4 +91,27 @@
     body {
         padding: 0;
     }
+}
+
+#img {
+  margin:auto;
+  padding: 16px 16px;
+  font-size: 0.85em;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background: none;
+  color: #FD3267;
+  outline: none;
+  cursor: pointer;
+}
+
+.upload-form {
+  border: 1px solid #FD3267;
+  margin: 5vh 20vw;
+  padding: 1%;
+}
+
+.img-box {
+  width: 200px;
+  height: 200px;
 }

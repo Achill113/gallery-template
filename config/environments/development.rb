@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -51,4 +52,11 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # AWS credentials
+  Aws.config.update({
+    credentials: Aws::Credentials.new('AKIAJ33GFANELAVV4KGA', 'iCofNwhHVyn3D3yd6iKKyHQC2ODSEqaG6p+Qho99')
+  })
+
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
