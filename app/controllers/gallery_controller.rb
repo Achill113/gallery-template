@@ -25,7 +25,8 @@ class GalleryController < ApplicationController
 
   def display
     @image = Image.find(params[:id])
-    send_file @image.url
+    args = params[:inline] ? {disposition: 'inline', type: 'image/png'} : {}
+    send_file @image.url, args
   end
 
   def link

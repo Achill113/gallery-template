@@ -13,7 +13,7 @@
 
               <% @local_images.each do |image| %>
                 <div class="col-sm-12 col-md-4">
-                  <a class="lightbox" href="<%= path_to_image("/private/uploads/index.png") %>">
+                  <a class="lightbox" href="<%= "/gallery/#{image.id}/display?inline=1" %>">
                     <center>
                       <%= image_tag("/gallery/#{image.id}/display", height: "200") %>
                     </center>
@@ -31,7 +31,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
-    baguetteBox.run('.tz-gallery');
+    baguetteBox.run('.lightbox');
 </script>
 <div class="upload-form">
   <%= form_tag({action: :upload}, multipart: true) do %>
