@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   end
 
   get '/gallery/:id/display', to: "gallery#display", as: "secure_image_display"
+  get '/gallery/:id/link', to: 'gallery#link', as: "secure_image_link"
 end

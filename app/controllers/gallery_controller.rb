@@ -28,4 +28,9 @@ class GalleryController < ApplicationController
     send_file @image.url
   end
 
+  def link
+    @image = Image.find(params[:id])
+    return @image.url
+  end
+
 end
