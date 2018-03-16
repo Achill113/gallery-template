@@ -14,11 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require gallery/responsive
-//= require gallery/slideshow
-//= require gallery/galleria
-//= require gallery/galleria/classic
-//= require gallery/touch_touch
+
+//= require photoswipe
+//= require photoswipe-ui-default
 
 //= require jquery/jquery.easing-1.3
 //= require jquery/jquery.elastislide
