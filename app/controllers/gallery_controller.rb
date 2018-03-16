@@ -15,17 +15,19 @@ class GalleryController < ApplicationController
     File.open(file_name, 'wb') do |file|
       file.write(uploaded_io.read)
     end
-    s3 = Aws::S3::Resource.new(region: 'us-east-2')
-    image_bucket = s3.bucket('promisesoftheheart')
-    obj = image_bucket.object(File.basename(file_name))
-    img = obj.upload_file(file_name)
     @image = Image.create({url: file_name})
     redirect_to :back
   end
 
   def display
     @image = Image.find(params[:id])
-    send_file @image.url
+    args = params[:inline] ? {disposition: 'inline', type: 'image/png'} : {}
+    send_file @image.url, args
+  end
+
+  def link
+    @image = Image.find(params[:id])
+    return @image.url
   end
 
 end

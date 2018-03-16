@@ -14,7 +14,7 @@ class PropertiesController < ApplicationController
   def description
     %q{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mauris arcu, auctor ac rhoncus non,  libero. Nulla dolor velit, volutpat a bibendum ut, hendrerit id mi. Pellentesque convallis erat in mi interdum rutrum. Phasellus interdum velit nulla.
     }
-  end  
+  end
 
   def photos
     @photos ||= RGallery::Photos.new nil, photo_class: Property::Photo
