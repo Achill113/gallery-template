@@ -1,11 +1,6 @@
-require 'aws-sdk-s3'
-
 class GalleryController < ApplicationController
 
   def index
-    s3 = Aws::S3::Resource.new(region: 'us-east-2')
-    image_bucket = s3.bucket('promisesoftheheart')
-    @images = image_bucket.objects.limit(10)
     @local_images = Image.all
   end
 

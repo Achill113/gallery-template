@@ -53,10 +53,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # AWS credentials
-  Aws.config.update({
-    credentials: Aws::Credentials.new('AKIAJ33GFANELAVV4KGA', 'iCofNwhHVyn3D3yd6iKKyHQC2ODSEqaG6p+Qho99')
-  })
-
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end
