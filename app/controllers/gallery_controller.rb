@@ -1,21 +1,17 @@
-require 'aws-sdk-s3'
-
 class GalleryController < ApplicationController
 
   def index
-    s3 = Aws::S3::Resource.new(region: 'us-east-2')
-    image_bucket = s3.bucket('promisesoftheheart')
-    @images = image_bucket.objects.limit(10)
     @local_images = Image.all
   end
 
   def upload
     uploaded_io = params[:img]
     file_name = Rails.root.join('private', 'uploads', uploaded_io.original_filename)
+    img_size = FastImage.size(uploaded_io)
     File.open(file_name, 'wb') do |file|
       file.write(uploaded_io.read)
     end
-    @image = Image.create({url: file_name})
+    @image = Image.create({url: file_name, width: img_size[0], height: img_size[1]})
     redirect_to :back
   end
 

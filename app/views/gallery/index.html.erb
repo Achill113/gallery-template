@@ -8,8 +8,8 @@
 
     <div class="photoswipe-gallery">
       <% @local_images.each do |img| %>
-        <figure>
-          <%= link_to "/gallery/#{img.id}/display?inline=1", :'data-size' => "1024x1024" do %>
+        <figure class='photoswipe-blocks'>
+          <%= link_to "/gallery/#{img.id}/display?inline=1", :'data-size' => "#{img.width}x#{img.height}" do %>
             <%= image_tag("/gallery/#{img.id}/display") %>
           <% end %>
         </figure>
