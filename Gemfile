@@ -48,5 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added gems
 gem "paperclip", "~> 5.2.1"
+gem 'fastimage'
 gem 'dotenv-rails'
 gem 'rails-gallery'

@@ -7,10 +7,11 @@ class GalleryController < ApplicationController
   def upload
     uploaded_io = params[:img]
     file_name = Rails.root.join('private', 'uploads', uploaded_io.original_filename)
+    img_size = FastImage.size(uploaded_io)
     File.open(file_name, 'wb') do |file|
       file.write(uploaded_io.read)
     end
-    @image = Image.create({url: file_name})
+    @image = Image.create({url: file_name, width: img_size[0], height: img_size[1]})
     redirect_to :back
   end
 
