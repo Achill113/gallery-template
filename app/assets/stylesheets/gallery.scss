@@ -44,22 +44,27 @@ body {
   background-color: #4d4d4d;
   margin: .5em;
   display: inline-block;
-  width: 210px;
-  height: 210px;
+  width: 32vw;
+  height: 32vw;
+  max-width: 210px;
+  max-height: 210px;
   figure {
     width: 200px;
     display: inline-block;
   }
   img {
-    width: 200px;
-    height: 200px;
+    width: 31vw;
+    height: 31vw;
+    max-width: 200px;
+    max-height: 200px;
     object-fit: scale-down;
-    margin-top: 5px;
+    margin-top: .4vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   a {
     display: inline-block;
-    width: 200px;
+    width: 31vw;
+    max-width: 200px;
     height: 100%;
     margin: auto;
   }

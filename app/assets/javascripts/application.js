@@ -16,6 +16,7 @@
 
 //= require photoswipe
 //= require photoswipe-ui-default
+//= require gallery
 
 //= require jquery/jquery.easing-1.3
 //= require jquery/jquery.elastislide

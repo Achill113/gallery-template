@@ -15,28 +15,33 @@ body {
 
 .logo {
   float: left;
-  padding: 1em;
+  position: relative;
+  padding-top: 1em;
+  padding-left: 1em;
   width: 100%;
   background-color: #FFFFFF;
   display: table;
-  h1 {
-    color: #8535a8;
-    font-family: 'Pacifico', cursive;
-    font-size: 2em;
-    margin: 0;
-    width: 64vw;
-    height: 25vw;
-    max-height: 25vh;
-    float: left;
-    display: table-cell;
-  }
   img {
     float: left;
-    width: 25vw;
-    max-width: 25vh;
-    margin: 0em 0.5em 0em 0em;
     display: table-cell;
   }
+}
+
+#logo {
+  // width: 25vw;
+  margin: 0 auto;
+  width: 22vw;
+  max-width: 7em;
+}
+
+#logo-text {
+  // position: absolute;
+  // bottom: 0;
+  // right: 10vw;
+  // margin: 0;
+  // width: 70vw;
+  // height: 25vw;
+  // max-height: 25vh;
 }
 
 .nav {
