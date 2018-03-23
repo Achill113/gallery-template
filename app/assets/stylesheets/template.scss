@@ -19,7 +19,7 @@ body {
   padding-top: 1em;
   padding-left: 1em;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #444244;
   display: table;
   img {
     float: left;
@@ -46,6 +46,7 @@ body {
 
 .nav {
   background-color: #707070;
+  // TODO: STICKY NAVBAR
   float: left;
   width: 100%;
   li {

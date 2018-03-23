@@ -2,15 +2,11 @@
 
 <div class="container gallery-container">
 
-    <h1>GALLERY</h1>
-
-    <p class="page-description text-center">I Don't Know What To Put Here</p>
-
     <div class="photoswipe-gallery">
-      <% @local_images.each do |img| %>
+      <% @local_images.each_with_index do |img, i| %>
         <figure class='photoswipe-blocks'>
           <%= link_to "/gallery/#{img.id}/display?inline=1", :'data-size' => "#{img.width}x#{img.height}" do %>
-            <%= image_tag("/gallery/#{img.id}/display") %>
+            <%= image_tag("/gallery/#{img.id}/display", :id => i) %>
           <% end %>
         </figure>
       <% end %>
