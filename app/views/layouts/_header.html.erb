@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arapey|Lovers+Quarrel|Pacifico|Droid+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <%= stylesheet_link_tag "template" %>
   </head>
@@ -20,11 +19,13 @@
         <!-- <h1>Promises of the Heart</h1> -->
       </div>
       <div class="nav">
-        <ul>
-          <li><%= link_to "HOME", :controller => 'home', :action => 'index'%></li>
-          <li><%= link_to "GALLERY", :controller => 'gallery', :action => 'index'%></li>
-          <li><%= link_to "CONTACT", :controller => 'home', :action => 'index'%></li>
-        </ul>
+        <span class="tabs">
+          <ul>
+            <li><%= link_to "HOME", :controller => 'home', :action => 'index'%></li>
+            <li><%= link_to "GALLERY", :controller => 'gallery', :action => 'index'%></li>
+            <li><%= link_to "CONTACT", :controller => 'home', :action => 'index'%></li>
+          </ul>
+        </span>
       </div>
     </div>
   <!-- </body>
